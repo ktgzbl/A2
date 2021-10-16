@@ -1,0 +1,117 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Gender Pay Gap Over Time",
+  "width": 440,
+  "height": 300,
+  "config": {
+      "axis": {
+          "labelFont": "Poppins",
+          "titleFont": "Poppins"
+      },
+      "legend": {
+          "labelFont": "Poppins",
+          "titleFont": "Poppins"
+      },
+      "header": {
+          "labelFont": "Poppins",
+          "titleFont": "Poppins"
+      },
+      "mark": {
+          "font": "Poppins"
+      },
+      "title": {
+          "font": "Poppins",
+          "subtitleFont": "Poppins",
+          "fontSize": 18,
+          "fontWeight": 600
+      },
+      "text": {
+          "font": "Poppins"
+      }
+  },
+  "data": {
+    "url": "data/gap_over_time_data.json"
+  },
+  "transform": [
+    {
+      "calculate": "1 - (datum.gap / 100)",
+      "as": "gap_by_dollar"
+    }
+  ],
+  "encoding": {
+    "tooltip": [
+      {
+        "field": "type",
+        "type": "nominal",
+        "title": "Category"
+      },
+      {
+        "field": "year",
+        "type": "nominal",
+        "title": "Year"
+      },
+      {
+        "field": "gap_by_dollar",
+        "type": "quantitative",
+        "title": "Gender Pay Gap ($)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "nominal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "gap_by_dollar",
+          "type": "quantitative",
+          "title": "Gender Pay Gap ($)",
+          "scale": {
+            "domainMax": 1.1,
+            "domainMin": 0
+          },
+          "axis": {
+            "tickMinStep": 0.1,
+            "format": ".2f"
+          }
+        },
+        "color": {
+          "field": "type",
+          "title": "Category",
+          "scale": {
+            "domain": [
+              "Overall",
+              "Managers",
+              "Non-Managers"
+            ],
+            "range": [
+              "#242424",
+              "#1E88E5",
+              "#D81B60"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "field": "baseline",
+          "aggregate": "mean"
+        },
+        "tooltip": {
+          "value": "Male Wage Baseline"
+        }
+      }
+    }
+  ]
+}

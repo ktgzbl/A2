@@ -1,0 +1,38 @@
+[
+    {
+        "occupation": "Professionals",
+        "gap_percentage": 18.3,
+        "gap_dollar_value": 24970,
+        "baseline": 1.0
+    },
+    {
+        "occupation": "Technicians and Trades",
+        "gap_percentage": 25.4,
+        "gap_dollar_value": 28363
+    },
+    {
+        "occupation": "Community & Personal Services",
+        "gap_percentage": 9.6,
+        "gap_dollar_value": 7467
+    },
+    {
+        "occupation": "Clerical & Administrative",
+        "gap_percentage": 7.7,
+        "gap_dollar_value": 6327
+    },
+    {
+        "occupation": "Sales",
+        "gap_percentage": 22.4,
+        "gap_dollar_value": 22090
+    },
+    {
+        "occupation": "Machinery Operators & Drivers",
+        "gap_percentage": 11.9,
+        "gap_dollar_value": 12410
+    },
+    {
+        "occupation": "Labourers",
+        "gap_percentage": 20.0,
+        "gap_dollar_value": 15099
+    }
+]

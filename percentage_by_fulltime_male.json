@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Male Employment (2020)",
+    "width": 300,
+    "height": 300,
+    "config": {
+        "axis": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "legend": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "header": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "mark": {
+            "font": "Poppins"
+        },
+        "title": {
+            "font": "Poppins",
+            "subtitleFont": "Poppins",
+            "fontSize": 18,
+            "fontWeight": 600
+        },
+        "text": {
+            "font": "Poppins"
+        }
+    },
+    "data": {
+        "url": "data/fulltime_percentages_male_2020.json"
+    },
+    "encoding": {
+        "theta": {
+            "field": "proportion",
+            "type": "quantitative",
+            "stack": true
+        },
+        "color": {
+            "field": "type",
+            "type": "nominal",
+            "legend": null,
+            "scale": {
+                "range": [
+                    "#D81B60",
+                    "#1E88E5",
+                    "#004D40"
+                ]
+            }
+        },
+        "tooltip": [
+            {
+                "field": "type",
+                "type": "nominal",
+                "title": "Employment Type"
+            },
+            {
+                "field": "proportion",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Proportion (%)"
+            }
+        ]
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "arc",
+                "outerRadius": 130
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "radius": 150
+            },
+            "encoding": {
+                "text": {
+                    "field": "type",
+                    "type": "nominal"
+                }
+            }
+        }
+    ]
+}

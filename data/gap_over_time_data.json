@@ -1,0 +1,111 @@
+[
+    {
+        "year": 2020,
+        "baseline": 1.0
+    },
+    {
+        "type": "Overall",
+        "year": 2014,
+        "gap": 24.7
+    },
+    {
+        "type": "Overall",
+        "year": 2015,
+        "gap": 24.0
+    },
+    {
+        "type": "Overall",
+        "year": 2016,
+        "gap": 23.1
+    },
+    {
+        "type": "Overall",
+        "year": 2017,
+        "gap": 22.4
+    },
+    {
+        "type": "Overall",
+        "year": 2018,
+        "gap": 21.3
+    },
+    {
+        "type": "Overall",
+        "year": 2019,
+        "gap": 20.8
+    },
+    {
+        "type": "Overall",
+        "year": 2020,
+        "gap": 20.1
+    },
+    {
+        "type": "Managers",
+        "year": 2014,
+        "gap": 29.8
+    },
+    {
+        "type": "Managers",
+        "year": 2015,
+        "gap": 28.8
+    },
+    {
+        "type": "Managers",
+        "year": 2016,
+        "gap": 28.0
+    },
+    {
+        "type": "Managers",
+        "year": 2017,
+        "gap": 27.2
+    },
+    {
+        "type": "Managers",
+        "year": 2018,
+        "gap": 25.7
+    },
+    {
+        "type": "Managers",
+        "year": 2019,
+        "gap": 25.1
+    },
+    {
+        "type": "Managers",
+        "year": 2020,
+        "gap": 23.2
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2014,
+        "gap": 21.6
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2015,
+        "gap": 20.9
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2016,
+        "gap": 20.2
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2017,
+        "gap": 19.7
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2018,
+        "gap": 19.0
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2019,
+        "gap": 18.5
+    },
+    {
+        "type": "Non-Managers",
+        "year": 2020,
+        "gap": 18.5
+    }
+]

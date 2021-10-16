@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Gender Pay Gap by State (May 2021)",
+    "width": 400,
+    "height": 300,
+    "config": {
+        "axis": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "legend": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "header": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "mark": {
+            "font": "Poppins"
+        },
+        "title": {
+            "font": "Poppins",
+            "subtitleFont": "Poppins",
+            "fontSize": 18,
+            "fontWeight": 600
+        },
+        "text": {
+            "font": "Poppins"
+        }
+    },
+    "projection": {
+        "type": "equirectangular"
+    },
+    "data": {
+        "url": "data/au-states.topojson",
+        "format": {
+            "type": "topojson",
+            "feature": "au-states"
+        }
+    },
+    "transform": [
+        {
+            "lookup": "properties.STATE_NAME",
+            "from": {
+                "data": {
+                    "url": "data/gap_by_state_data_may_2021.json"
+                },
+                "key": "state",
+                "fields": [
+                    "gap"
+                ]
+            }
+        },
+        {
+            "calculate": "1 - (datum.gap / 100)",
+            "as": "gap_by_dollar"
+        }
+    ],
+    "mark": {
+        "type": "geoshape"
+    },
+    "encoding": {
+        "color": {
+            "field": "gap_by_dollar",
+            "type": "quantitative",
+            "scale": {
+                "domainMax": 1,
+                "range": ["#C8B1FF", "#7439FF"],
+                "reverse": true
+            },
+            "title": "Gender Pay Gap ($)"
+        },
+        "tooltip": [
+            {
+                "field": "properties.STATE_NAME",
+                "type": "nominal",
+                "title": "State"
+            },
+            {
+                "field": "gap_by_dollar",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Gender Pay Gap ($)"
+            }
+        ]
+    }
+}

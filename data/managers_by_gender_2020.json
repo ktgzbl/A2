@@ -1,0 +1,62 @@
+[
+    {
+        "type": "Overall",
+        "gender": "Female",
+        "proportion": 39.9
+    },
+    {
+        "type": "Overall",
+        "gender": "Male",
+        "proportion": 60.1
+    },
+    {
+        "type": "CEO / Head of Business",
+        "gender": "Female",
+        "proportion": 18.3
+    },
+    {
+        "type": "CEO / Head of Business",
+        "gender": "Male",
+        "proportion": 81.7
+    },
+    {
+        "type": "Key Management Personnel",
+        "gender": "Female",
+        "proportion": 32.5
+    },
+    {
+        "type": "Key Management Personnel",
+        "gender": "Male",
+        "proportion": 67.5
+    },
+    {
+        "type": "Other Executives / General Managers",
+        "gender": "Female",
+        "proportion": 33.4
+    },
+    {
+        "type": "Other Executives / General Managers",
+        "gender": "Male",
+        "proportion": 66.6
+    },
+    {
+        "type": "Senior Managers",
+        "gender": "Female",
+        "proportion": 36.5
+    },
+    {
+        "type": "Senior Managers",
+        "gender": "Male",
+        "proportion": 63.5
+    },
+    {
+        "type": "Other Managers",
+        "gender": "Female",
+        "proportion": 43.0
+    },
+    {
+        "type": "Other Managers",
+        "gender": "Male",
+        "proportion": 57.0
+    }
+]

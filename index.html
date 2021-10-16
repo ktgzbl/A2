@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Australian Gender Pay Gap</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+        rel="stylesheet" crossorigin="anonymous">
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: #6137c2;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #6137c2;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        em {
+            font-style: normal;
+            font-weight: 800;
+            color: #6137c2;
+        }
+
+        .page {
+            width: 900px;
+            margin: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .section {
+            padding-bottom: 50px;
+        }
+
+        .centred-vertical-parent {
+            display: grid;
+        }
+
+        .centred-vertical {
+            margin: auto;
+        }
+
+        .centred-horizontal {
+            text-align: center;
+        }
+
+        .padded-annotation {
+            padding-left: 0em;
+            padding-right: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- pure grid group -->
+        <div class="pure-g section">
+            <div class="pure-u-1-1">
+                <div class="centred-horizontal">
+                    <h1>The Australian Gender Pay Gap</h1>
+                    <h2>with other inequalities<br>in industry, management,<br>and leadership representation
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <br>
+
+        <!-- pure grid group -->
+        <!-- - Fulltime/Parttime/Casual by Gender (Pie Chart) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        Over <em>two thirds (67.4%)</em> of <em>male</em> employees have a <em>full-time position</em>,
+                        compared to just <em>40.6%</em>
+                        of
+                        <em>female</em> employees.
+                    </p>
+                    <br>
+                    <p>
+                        <em>Part-Time</em> workers make up just <em>10.8% of male</em> employees, while they make up
+                        <em>almost a third
+                            (31.9%) of female</em> employees.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-1-3">
+                <div id="visualisation-employment-types-female" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-3">
+                <div id="visualisation-employment-types-male" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Managers vs Non-Managers Composition (Stacked Bar Chart) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        Women make up just <em>18.3%</em> of <em>CEOs</em>, and <em>39.9%</em> of overall
+                        <em>management</em> positions.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-manager-proportions" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Managers vs Non-Managers Composition (Stacked Bar Chart) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        Women are <em>greatly under-represented</em> in <em>Machinery Operation/Driving</em>, making up
+                        <em>13.2%</em> of employees, and <em>Technician/Trade</em> roles, at <em>14%</em>.
+                    </p>
+                    <br>
+                    <p>
+                        Women make up almost <em>three quarters (73.8%)</em> of <em>Clerical and Administrative
+                            roles</em>, and <em>72.0%</em>
+                        of
+                        <em>Community and Personal Service roles</em>.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-non-manager-proportions" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Pay Gaps by Manager/Non-Manager (Bar Chart) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        Women in <em>Key Management Personnel</em> positions earn just <em>AUD$0.76</em> for every
+                        dollar that men
+                        make in
+                        the same positions.
+                    </p>
+                    <br>
+                    <p>
+                        This adds up to an <em>AUD$89,141</em> difference in salary per annum compared to men.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-gap-by-manager-role" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Pay Gaps by Manager/Non-Manager (Bar Chart) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        Women in <em>Technician/Trades</em> positions earn just <em>AUD$0.74</em> for every dollar that
+                        men make in
+                        the
+                        same positions.
+                    </p>
+                    <br>
+                    <p>
+                        This adds up to an <em>AUD$28,363</em> difference in salary per annum compared to men.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-gap-by-non-manager-role" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Current Pay Gap by State (map) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        The Gender Pay Gap is at its <em>widest</em> in <em>Western Australia</em>, with women earning
+                        <em>$0.78</em> per
+                        dollar
+                        compared to men working in the state.
+                    </p>
+                    <br>
+                    <p>
+                        <em>South Australia</em> has the <em>smallest</em> Gender Pay Gap, with women earning
+                        <em>$0.93</em> per dollar earned
+                        by
+                        men.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-gap-by-state" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Current Pay Gap by Industry (bar) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        Women working in the <em>Professional, Scientific, and Technical Services</em> industry earn
+                        just
+                        <em>$0.74</em>
+                        for every dollar men in the same industry make.
+                    </p>
+                    <br>
+                    <p>
+                        The industry with one of the <em>smallest</em> Gender Pay Gaps is the <em>Public Administration
+                            and
+                            Safety</em>
+                        industry, at <em>$0.92</em> for every dollar earned by men.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-gap-by-industry" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <!-- - Pay Gap over time (line graph with line for each state) -->
+        <div class="pure-g section">
+            <div class="pure-u-1-3 centred-vertical-parent">
+                <div class="centred-horizontal centred-vertical padded-annotation">
+                    <p>
+                        In Australia, the Gender Pay Gap has seen a <em>steady and consistent reduction</em> over time.
+                    </p>
+                    <br>
+                    <p>
+                        The GPG has <em>fallen</em> from <em>$0.75</em> per dollar in <em>2014</em>, to <em>$0.80</em>
+                        per dollar in <em>2020</em>.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="visualisation-gap-over-time" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+    </div>
+</body>
+
+<script type="text/javascript">
+    var visualisationEmploymentTypesMale = "./percentage_by_fulltime_male.json";
+    var visualisationEmploymentTypesFemale = "./percentage_by_fulltime_female.json";
+    var visualisationManagerProportions = "./managers_composition.json";
+    var visualisationNonManagerProportions = "./nonmanagers_composition.json";
+    var visualisationGapByManagerRole = "./gap_by_manager_role.json";
+    var visualisationGapByNonManagerRole = "./gap_by_nonmanager_role.json";
+    var visualisationGapByState = "./gap_by_state.json";
+    var visualisationGapByIndustry = "./gap_by_industry.json";
+    var visualisationGapOverTime = "./gap_over_time.json";
+
+    vegaEmbed('#visualisation-employment-types-male', visualisationEmploymentTypesMale, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-employment-types-female', visualisationEmploymentTypesFemale, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-manager-proportions', visualisationManagerProportions, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-non-manager-proportions', visualisationNonManagerProportions, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-gap-by-manager-role', visualisationGapByManagerRole, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-gap-by-non-manager-role', visualisationGapByNonManagerRole, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-gap-by-state', visualisationGapByState, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-gap-by-industry', visualisationGapByIndustry, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+    vegaEmbed('#visualisation-gap-over-time', visualisationGapOverTime, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+
+</script>
+
+</html>

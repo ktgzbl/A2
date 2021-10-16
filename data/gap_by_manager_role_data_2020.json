@@ -1,0 +1,23 @@
+[
+    {
+        "manager_category": "Key Management Personnel",
+        "gap_percentage": 23.4,
+        "gap_dollar_value": 89141,
+        "baseline": 1.0
+    },
+    {
+        "manager_category": "Other Executives / General Managers",
+        "gap_percentage": 20.5,
+        "gap_dollar_value": 67768
+    },
+    {
+        "manager_category": "Senior Managers",
+        "gap_percentage": 16.7,
+        "gap_dollar_value": 38743
+    },
+    {
+        "manager_category": "Other Managers",
+        "gap_percentage": 19.7,
+        "gap_dollar_value": 29973
+    }
+]

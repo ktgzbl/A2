@@ -1,0 +1,100 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Gender Pay Gap by Non-Managerial Occupation (May 2021)",
+    "width": 400,
+    "height": 300,
+    "config": {
+        "axis": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "legend": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "header": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "mark": {
+            "font": "Poppins"
+        },
+        "title": {
+            "font": "Poppins",
+            "subtitleFont": "Poppins",
+            "fontSize": 18,
+            "fontWeight": 600
+        },
+        "text": {
+            "font": "Poppins"
+        }
+    },
+    "data": {
+        "url": "data/gap_by_nonmanager_role_data_2020.json"
+    },
+    "transform": [
+        {
+            "calculate": "1 - (datum.gap_percentage / 100)",
+            "as": "gap_by_dollar"
+        }
+    ],
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "gap_by_dollar",
+                    "type": "quantitative",
+                    "title": "Gender Pay Gap ($)",
+                    "scale": {
+                        "domainMax": 1.1,
+                        "domainMin": 0
+                    }
+                },
+                "y": {
+                    "field": "occupation",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": 0,
+                        "labelLimit": 300
+                    },
+                    "sort": "x",
+                    "title": "Occupation"
+                },
+                "color": {
+                    "value": "#7439FF"
+                },
+                "tooltip": [
+                    {
+                        "field": "occupation",
+                        "type": "nominal",
+                        "title": "Occupation"
+                    },
+                    {
+                        "field": "gap_by_dollar",
+                        "type": "nominal",
+                        "title": "Gender Pay Gap ($)",
+                        "format": ".2f"
+                    },
+                    {
+                        "field": "gap_dollar_value",
+                        "type": "quantitative",
+                        "title": "Gender Pay Gap p.a. ($)"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {
+                    "field": "baseline",
+                    "aggregate": "mean"
+                },
+                "tooltip": {
+                    "value": "Male Wage Baseline"
+                }
+            }
+        }
+    ]
+}

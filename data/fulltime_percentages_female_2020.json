@@ -1,0 +1,14 @@
+[
+    {
+        "type": "Full-Time",
+        "proportion": 40.6
+    },
+    {
+        "type": "Part-Time",
+        "proportion": 31.9
+    },
+    {
+        "type": "Casual",
+        "proportion": 27.5
+    }
+]

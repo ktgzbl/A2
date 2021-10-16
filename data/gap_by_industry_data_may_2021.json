@@ -1,0 +1,75 @@
+[
+    {
+        "industry": "Professional, Scientific, and Technical Services",
+        "gap": 25.3,
+        "baseline": 1.0
+    },
+    {
+        "industry": "Financial and Insurance Services",
+        "gap": 24.1
+    },
+    {
+        "industry": "Health Care and Social Assistance",
+        "gap": 20.7
+    },
+    {
+        "industry": "Rental, Hiring, and Real Estate Services",
+        "gap": 19.1
+    },
+    {
+        "industry": "Mining",
+        "gap": 17.2
+    },
+    {
+        "industry": "Construction",
+        "gap": 16.6
+    },
+    {
+        "industry": "Information Media and Telecommunications",
+        "gap": 16.6
+    },
+    {
+        "industry": "Transport, Postal, and Warehousing",
+        "gap": 15.2
+    },
+    {
+        "industry": "Wholesale",
+        "gap": 15.0
+    },
+    {
+        "industry": "Administrative and Support Services",
+        "gap": 14.8
+    },
+    {
+        "industry": "Manufacturing",
+        "gap": 13.3
+    },
+    {
+        "industry": "Education and Training",
+        "gap": 11.4
+    },
+    {
+        "industry": "Arts and Recreation Services",
+        "gap": 10.8
+    },
+    {
+        "industry": "Retail",
+        "gap": 10.8
+    },
+    {
+        "industry": "Accommodation and Food Services",
+        "gap": 10.5
+    },
+    {
+        "industry": "Electricity, Gas, Water, and Waste Services",
+        "gap": 7.6
+    },
+    {
+        "industry": "Public Administration and Safety",
+        "gap": 7.3
+    },
+    {
+        "industry": "Other Services",
+        "gap": 0.9
+    }
+]

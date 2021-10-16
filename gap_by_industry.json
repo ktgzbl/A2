@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Gender Pay Gap by Industry (May 2021)",
+    "width": 400,
+    "height": 400,
+    "config": {
+        "axis": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "legend": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "header": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "mark": {
+            "font": "Poppins"
+        },
+        "title": {
+            "font": "Poppins",
+            "subtitleFont": "Poppins",
+            "fontSize": 18,
+            "fontWeight": 600
+        },
+        "text": {
+            "font": "Poppins"
+        }
+    },
+    "data": {
+        "url": "data/gap_by_industry_data_may_2021.json"
+    },
+    "transform": [
+        {
+            "calculate": "1 - (datum.gap / 100)",
+            "as": "gap_by_dollar"
+        }
+    ],
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "gap_by_dollar",
+                    "type": "quantitative",
+                    "title": "Gender Pay Gap ($)",
+                    "scale": {
+                        "domainMax": 1.1,
+                        "domainMin": 0
+                    }
+                },
+                "y": {
+                    "field": "industry",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": 0,
+                        "labelLimit": 300
+                    },
+                    "sort": "x",
+                    "title": "Industry"
+                },
+                "color": {
+                    "value": "#7439FF"
+                },
+                "tooltip": [
+                    {
+                        "field": "industry",
+                        "type": "nominal",
+                        "title": "Industry"
+                    },
+                    {
+                        "field": "gap_by_dollar",
+                        "type": "nominal",
+                        "title": "Gender Pay Gap ($)",
+                        "format": ".2f"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {
+                    "field": "baseline",
+                    "aggregate": "mean"
+                },
+                "tooltip": {
+                    "value": "Male Wage Baseline"
+                }
+            }
+        }
+    ]
+}

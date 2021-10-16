@@ -1,0 +1,82 @@
+[
+    {
+        "type": "Overall",
+        "gender": "Female",
+        "proportion": 51.7
+    },
+    {
+        "type": "Overall",
+        "gender": "Male",
+        "proportion": 48.3
+    },
+    {
+        "type": "Clerical and Administrative",
+        "gender": "Female",
+        "proportion": 73.8
+    },
+    {
+        "type": "Clerical and Administrative",
+        "gender": "Male",
+        "proportion": 26.2
+    },
+    {
+        "type": "Community and Personal Service",
+        "gender": "Female",
+        "proportion": 72.0
+    },
+    {
+        "type": "Community and Personal Service",
+        "gender": "Male",
+        "proportion": 28.0
+    },
+    {
+        "type": "Sales",
+        "gender": "Female",
+        "proportion": 58.7
+    },
+    {
+        "type": "Sales",
+        "gender": "Male",
+        "proportion": 41.3
+    },
+    {
+        "type": "Professionals",
+        "gender": "Female",
+        "proportion": 53.5
+    },
+    {
+        "type": "Professionals",
+        "gender": "Male",
+        "proportion": 46.5
+    },
+    {
+        "type": "Labourers",
+        "gender": "Female",
+        "proportion": 32.8
+    },
+    {
+        "type": "Labourers",
+        "gender": "Male",
+        "proportion": 67.2
+    },
+    {
+        "type": "Technicians and Trade",
+        "gender": "Female",
+        "proportion": 14.0
+    },
+    {
+        "type": "Technicians and Trade",
+        "gender": "Male",
+        "proportion": 86.0
+    },
+    {
+        "type": "Machinery Operators and Drivers",
+        "gender": "Female",
+        "proportion": 13.2
+    },
+    {
+        "type": "Machinery Operators and Drivers",
+        "gender": "Male",
+        "proportion": 86.8
+    }
+]

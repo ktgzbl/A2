@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Manager Proportions by Gender (2020)",
+    "width": 400,
+    "height": 280,
+    "config": {
+        "axis": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "legend": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "header": {
+            "labelFont": "Poppins",
+            "titleFont": "Poppins"
+        },
+        "mark": {
+            "font": "Poppins"
+        },
+        "title": {
+            "font": "Poppins",
+            "subtitleFont": "Poppins",
+            "fontSize": 18,
+            "fontWeight": 600
+        },
+        "text": {
+            "font": "Poppins"
+        }
+    },
+    "data": {
+        "url": "data/managers_by_gender_2020.json"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "aggregate": "sum",
+            "field": "proportion",
+            "axis": null
+        },
+        "y": {
+            "field": "type",
+            "sort": "-x",
+            "title": "Manager Type"
+        },
+        "color": {
+            "field": "gender",
+            "legend": {
+                "title": "Gender"
+            },
+            "scale": {
+                "range": [
+                    "#7439FF", "#FFC107"
+                ]
+            }
+        },
+        "tooltip": [
+            {
+                "field": "gender",
+                "type": "nominal",
+                "title": "Gender"
+            },
+            {
+                "field": "proportion",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Proportion (%)"
+            }
+        ]
+    }
+}
